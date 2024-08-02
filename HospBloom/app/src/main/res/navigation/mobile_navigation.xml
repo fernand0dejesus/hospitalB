@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_lista">
+
+    <fragment
+        android:id="@+id/navigation_agregar"
+        android:name="Fernando.Morales.hospbloom.ui.agregar.AgregarFragment"
+        android:label="Agregar"
+        tools:layout="@layout/fragment_agregar" />
+
+    <fragment
+        android:id="@+id/navigation_lista"
+        android:name="Fernando.Morales.hospbloom.ui.list.ListFragment"
+        android:label="Lista"
+        tools:layout="@layout/fragment_lista">
+        <action
+            android:id="@+id/action_detalles"
+            app:destination="@+id/Detalles">
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/Detalles"
+        android:name="Fernando.Morales.hospbloom.ui.list.ListFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_detalles" />
+</navigation>

@@ -1,0 +1,16 @@
+CREATE TABLE Pacientes (
+   PacienteUUID VARCHAR2(50) PRIMARY KEY,
+   Nombre VARCHAR2(100) NOT NULL,
+   TipoSangre VARCHAR2(3)NOT NULL,
+   Telefono VARCHAR2(15) UNIQUE,
+   Enfermedad VARCHAR2(100),
+   Num_Habitacion NUMBER,
+   Num_Cama NUMBER,
+   Lista_Medicamentos VARCHAR2(300),
+   FechaNacimiento VARCHAR2 (10) NOT NULL,
+   horaMedicacion VARCHAR2(10)
+);
+
+DROP TABLE Pacientes;
+
+SELECT * FROM pacientes;
